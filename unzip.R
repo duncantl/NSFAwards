@@ -16,6 +16,7 @@ function(y, force = FALSE)
 }    
 
 y = c(1959:2014, "Historical")
+y = gsub("\\.zip", "", list.files(pattern = "zip$"))
 sapply(y, unz)
 
 library(Rcompression)
